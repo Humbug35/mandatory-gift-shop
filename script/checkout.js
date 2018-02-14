@@ -38,5 +38,5 @@ btn.addEventListener("click", function (e) {
         alert(errorMessage);
         return false;
     }
-    document.getElementById("myForm").submit();
+    document.getElementById("myForm").submit(alert("Ditt meddelande är skickat!"));
 });
