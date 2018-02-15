@@ -9,21 +9,24 @@ btn.addEventListener("click", function (e) {
     let zipCode = document.getelementById("zip").value;
     let city = document.getelementById("city").value;
 });*/
-
+let emailPattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 let btn = document.getElementById("Knapp");
 
 btn.addEventListener("click", function (e) {
     e.preventDefault();
-    errorMessage = "";
+     let errorMessage = "";
 
     if(document.getElementById("firstName").value === ""){
-        errorMessage += "Enter your First Name \n";
+         errorMessage += "Enter your First Name \n";
     }
     if(document.getElementById("lastName").value === ""){
         errorMessage += "Enter your Last Name \n";
     }
     if(document.getElementById("email").value === ""){
         errorMessage += "Enter your Email \n";
+    }
+    if (!emailPattern.test(email.value)){
+        errorMessage += "Please check if your Email is valid \n";
     }
     if(document.getElementById("address").value === ""){
         errorMessage += "Enter your Street Address \n";
