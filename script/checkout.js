@@ -22,11 +22,11 @@ btn.addEventListener("click", function (e) {
     if(document.getElementById("lastName").value === ""){
         errorMessage += "Enter your Last Name \n";
     }
-    /*if(document.getElementById("email").value === ""){
+    if(document.getElementById("email").value  === ""){
         errorMessage += "Enter your Email \n";
-    }*/
-    if (!emailPattern.test(email.value)){
-        errorMessage += "Enter your Email or check if your Email is valid \n";
+    }
+    else if(!emailPattern.test(email.value)){
+        errorMessage += "Check if your Email is valid \n";
     }
     if(document.getElementById("address").value === ""){
         errorMessage += "Enter your Street Address \n";
