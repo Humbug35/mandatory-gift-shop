@@ -46,7 +46,7 @@ img{
     border-radius: 50%;
     height: 25vh;
 }
-input[type=button]{
+button{
     background-color: #5041ff;
     color: white;
     width: 25%;

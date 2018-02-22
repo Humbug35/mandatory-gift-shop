@@ -18,9 +18,13 @@ let houses = [{title: "Magic House", image: "../images/house-3123525_640.jpg", p
 
 
 for(let i of houses) {
-    document.getElementById("products").innerHTML += `<div class="myDivision"><h3>${i.title}</h3> <img src=' ${i.image}'/> <h3>${i.price} kr</h3> <h3>${i.description}</h3> <input type="button" value="BUY!"></div>`
-    console.log(i);
+    document.getElementById("products").innerHTML += `<div class="myDivision">
+    <h3>${i.title}</h3> 
+    <img src=' ${i.image}'/> 
+    <h3>${i.price} kr</h3> <h3>${i.description}</h3> 
+    <button>Add to cart</button></div>`
 }
+
 
 /*
 let houseOne = {
