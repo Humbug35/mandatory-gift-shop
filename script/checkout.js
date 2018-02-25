@@ -9,6 +9,39 @@ btn.addEventListener("click", function (e) {
     let zipCode = document.getelementById("zip").value;
     let city = document.getelementById("city").value;
 });*/
+function loadItems() {
+    let shoppingCartItems = JSON.parse(localStorage.getItem("shoppingCartItems"));
+    let showYourCart = document.getElementById("yourShoppingCart");
+
+    function displayYourCart(house) {
+        let productContainer = document.createElement("article");
+        let productHeader = document.createElement("h2");
+        let productImage = document.createElement("img");
+        let productPrice = document.createElement("h4");
+        let productDescription = document.createElement("p");
+
+        productHeader.innerText = house.title;
+        productImage.setAttribute("src", house.image);
+        productPrice.innerText = `${house.price} SEK`;
+        productDescription.innerText = house.description;
+
+        productContainer.appendChild(productHeader);
+        productContainer.appendChild(productImage);
+        productContainer.appendChild(productPrice);
+        productContainer.appendChild(productDescription);
+        showYourCart.appendChild(productContainer);
+    }
+        if(shoppingCartItems === null){
+        showYourCart.innerHTML = `<h2>Your shoppingCart are empty!</h2>`;
+        }
+        else{
+            shoppingCartItems.forEach((item) => {
+                displayYourCart(item);
+            });
+        }
+}
+loadItems();
+
 let emailPattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 let btn = document.getElementById("Knapp");
 
