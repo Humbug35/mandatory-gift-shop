@@ -74,5 +74,7 @@ btn.addEventListener("click", function (e) {
         alert(errorMessage);
         return false;
     }
-    document.getElementById("myForm").submit(alert("Ditt meddelande är skickat!"));
+    document.getElementById("myForm").submit(alert("Your message was sent!"));
 });
+
+    //document.getElementById("firstName").value === "" ? errorMessage += "Enter your First Name \n";
