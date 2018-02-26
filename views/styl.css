@@ -30,7 +30,7 @@ section{
     justify-content: center;
     flex-wrap:wrap;
 }
-.myDivision{
+.productsArticle{
     margin: 0 0 10px 10px;
     width: 28%;
     display: flex;
@@ -52,7 +52,9 @@ button{
     border-radius: 10px;
     border: none;
 }
-
+a{
+    text-decoration: none;
+}
 /* Checkoutpage*/
 #backToProducts{
     text-decoration: none;

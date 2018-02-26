@@ -25,6 +25,7 @@ function addProductToCart(house) {
 
 function showMyProducts(house) {
     let productContainer = document.createElement("article");
+    productContainer.setAttribute("class", "productsArticle");
     let productHeader = document.createElement("h2");
     productHeader.innerText = house.title;
     let productImage = document.createElement("img");
